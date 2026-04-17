@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>480</width>
-    <height>640</height>
+    <height>666</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,10 +26,18 @@
      <item>
       <layout class="QHBoxLayout" name="dates_layout">
        <item>
-        <widget class="QDateEdit" name="start_date_edit"/>
+        <widget class="QDateEdit" name="start_date_edit">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
        </item>
        <item>
-        <widget class="QDateTimeEdit" name="end_date_edit"/>
+        <widget class="QDateEdit" name="end_date_edit">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
