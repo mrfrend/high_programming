@@ -10,6 +10,7 @@ class CompanyCard(Ui_Frame, QFrame):
 		super().__init__()
 		self.setupUi(self)
 		self.company = company
+		self.setMaximumSize(300, 200)
 		
 		self.name.setText(self.company["name"])
 		self.contribution.setText(f"Взнос {self.company['contribution_price']} р.")

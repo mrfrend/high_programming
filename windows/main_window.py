@@ -1,5 +1,5 @@
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QGridLayout, QVBoxLayout, QWidget, QLineEdit
+from PyQt6.QtWidgets import QGridLayout, QVBoxLayout, QWidget, QLineEdit, QSizePolicy
 
 from database.database import db
 from windows.company_card import CompanyCard
