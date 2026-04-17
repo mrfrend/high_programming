@@ -26,9 +26,12 @@ class Database:
     def commit(self):
         self.connection.commit()
 
-    def get_companies(self):
+    def get_companies(self, search_text: str | None = None):
         with self.cursor() as cur:
-            cur.execute("SELECT * FROM companies")
+            if search_text:
+                cur.execute("SELECT * FROM companies WHERE name LIKE %s", [f"%{search_text}%"])
+            else:
+                cur.execute("SELECT * FROM companies")
             return cur.fetchall()
 
     def get_events_for_company(self, company_id):
